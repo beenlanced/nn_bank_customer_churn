@@ -7,11 +7,15 @@ requires-python = ">=3.11"
 dependencies = [
     "dotenv>=0.9.9",
     "imblearn>=0.0",
+    "ipykernel>=6.30.1",
     "keras>=3.11.3",
+    "keras-visualizer>=3.2.0",
     "matplotlib>=3.10.5",
     "numpy>=2.3.2",
     "pandas>=2.3.2",
     "scikit-learn>=1.7.1",
     "seaborn>=0.13.2",
     "tensorflow>=2.20.0",
+    "tensorflow-keras>=0.1",
+    "visualkeras>=0.1.4",
 ]
