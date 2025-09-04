@@ -14,11 +14,11 @@ This project aims to develop a predictive model to identify potential customer c
 
 ### The Problem
 
-Businesses such as banks providing services must concern themselves with the issue of `"Customer Churn"`. Churn is when customers switch to another service provider. For businesses it is crucial to comprehend the factors that influence a customer's decision in to bounce. By understanding these factors, businesses management can cguide their management's efforts to enhance business services to retain customers and understand which services might have higher priorities over others.
+Businesses such as banks providing services must concern themselves with the issue of `"Customer Churn"`. Churn is when customers switch to another service provider. For businesses, it is crucial to comprehend the factors that influence a customer's decision to bounce. By understanding these factors, businesses management can guide their management's efforts to enhance business services to retain customers and understand which services might have higher priorities over others.
 
 **As the bank's data scientist build a neural network based classifier that can determine whether a customer will leave the bank within the next 6 months.**
 
-### Some Questions to Keep In Mind
+### Some Questions to Keep in Mind
 
 - How many active members are there with the bank?
 - How do the rates of churn compare by gender?
@@ -33,7 +33,7 @@ The project:
 
 - Loads and inspects the banking data
 - Preprocesses/cleans the data
-- Performs exploratory data analysis
+- Performs exploratory data analysis (EDA)
   - Statistical summary of the data
   - Normalize the data
   - Feature engineering
@@ -43,18 +43,44 @@ The project:
 - Tests for balanced and imbalanced data sets
 - Use different methods mentioned below to improve the model by finding the optimal threshold using
   **Area Under the Receiver-Operating Characteris (ROC) Curve [(AUC)]** curves for each of the methods
+- Builds a NN model with SGD optimizer
 - Builds a NN model with Adam optimizer
+- Builds a NN Network model with Dropout and SGD optimizer
 - Builds a NN Network model with Dropout and Adam optimizer
-- Builds NN model with Hyperparameter tuning using Grid search and Adam optimizer
-- Builds a model with balanced data by applying SMOTE and Adam optimizer
+- Builds a model with balanced data by applying SMOTE and SGD optimizer and Droput
+- Builds a model with balanced data by applying SMOTE and Adam optimizer and Dropout
 - Assess the model performance for each of the created models
 - Chooses the best model among the created models
 - Creates a Deep Learning Keras built neural network to build the prediction model
 - Conducts analysis of the predictive model results
 
-### Sumamry, Actionable Insights, and Business Recommendations
+### Summary, Actionable Insights, and Business Recommendations
 
-The best model is the `simple dropout model with a 15% FN rate (Model #)`, and this is the model to take to production.
+The best model is the `simple dropout model with a 12.72% FN rate (Model with SMOTE, ADAM, and DROPOUT)`, and this is the model to take to production.
+
+This model produced the following
+
+**Reduced overfitting:** Seen in validation loss figures amongst all of the models tested.
+
+**Accuracy:** The model achieved an accuracy of approximately 81%, indicating that it correctly classified 81% of the instances in the test dataset.
+
+**Precision:** For predicting churn (class 1), the precision is 53%, implying that when the model predicts churn, it is correct 53% of the time. For non-churn (class 0), the precision is 94%.
+
+**Recall:** The recall for churn (class 1) is 69%, meaning that the model identified 69% of the actual churn cases correctly. For non-churn (class 0), the recall is 84%.
+
+**F1-score:** The F1-score, which is the harmonic mean of precision and recall, is 0.60 for churn (class 1) and 0.88 for non-churn (class 0).
+
+#### Business Recommendations
+
+**Precision and Recall Balance:** The model demonstrates a trade-off between precision and recall. While it achieves a high precision for non-churn customers, the precision for churn prediction is relatively lower. However, it manages to capture a significant portion of actual churn cases with a reasonable recall. This indicates that the model can effectively identify potential churners, albeit with some misclassifications.
+
+**Focus on Recall Improvement:** To improve the model's performance further, particularly in identifying churn cases, focus should be placed on improving recall without significantly sacrificing precision. This can be achieved through strategies such as feature engineering, exploring different model architectures, adjusting class weights, or collecting more diverse data.
+
+**Utilizing Predictions for Customer Retention:** Despite its limitations, the model can still provide valuable insights for the bank's customer retention strategies. By leveraging the model predictions, the bank can prioritize efforts towards retaining customers who are predicted to churn, offering tailored incentives, personalized communication, or targeted marketing campaigns to mitigate churn risk.
+
+**Continuous Model Monitoring, Improvement, and Refreshment:** It's essential to continuously monitor the model's performance and retrain it periodically with updated data. As customer behavior evolves over time, the model needs to adapt to capture new patterns and trends accurately. Regular evaluation and refinement of the model will ensure its effectiveness in supporting the bank's customer retention efforts.
+
+**Conclusion:** While this Model provides a solid foundation for predicting customer churn, there's room for improvement to enhance its predictive power and applicability in real-world business scenarios. By focusing on refining the model and integrating its predictions into strategic decision-making processes, the bank can proactively address churn risk and foster long-term customer relationships.
 
 ---
 
@@ -63,15 +89,20 @@ The best model is the `simple dropout model with a 15% FN rate (Model #)`, and t
 The project contains the key elements:
 
 - `Area Under the Receiver-Operating Characteris (ROC) Curve [(AUC)]` scoring for classifer identification,
+- `Deep Learning` for neural networks building,
 - `Dropout`, regularization technique appilied to prevent overfitting by randomly turning off a fraction of the neurons during training,
 - `Git` (version control),
 - `imblearn` Python library to perform oversampling and undersampling for balancing data sets,
 - `Jupyter` Python coded notebooks,
+- `Keras` to build nodes and layers,
+- `Matplotlib` visualization of data,
 - `Numpy` for arrays and numerical operations,
 - `Pandas` for dataframe usage,
 - `Python` the standard modules,
-- `SMOTE` to help with oversampling and balancing data sets,
+- `Seaborn` visualization of data,
 - `Scikit-Learn` to get training and test datasets,
+- `SMOTE` to help with oversampling and balancing data sets,
+- `TensorFlow` to build nodes and layers,
 - `uv` package management including use of `ruff` for linting and formatting
 
 ## Tech Stack
@@ -85,6 +116,7 @@ The project contains the key elements:
 ![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff)
 ![Plotly](https://img.shields.io/badge/Plotly-239120?style=for-the-badge&logo=plotly&logoColor=white)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Scikit-Learn](https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
@@ -213,8 +245,4 @@ Specifically, I would like to acknowledge:
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENSE](./LICENSE) file for details
-
-https://github.com/jreves/AIML_Projects/blob/main/Bank%20Churn%20Neural%20Network%20Modeling.ipynb
-
-https://github.com/ArenaHernandez/NeuralNetworks_BankChurnPrediction/blob/main/Predicting_Customer_Churn_Full_Code_Version_ArenaHernandez.ipynb
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details
