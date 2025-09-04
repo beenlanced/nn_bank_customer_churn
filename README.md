@@ -18,7 +18,7 @@ Businesses such as banks providing services must concern themselves with the iss
 
 **As the bank's data scientist build a neural network based classifier that can determine whether a customer will leave the bank within the next 6 months.**
 
-### Some Questions to Keep In Mind
+### Some Questions to Keep in Mind
 
 - How many active members are there with the bank?
 - How do the rates of churn compare by gender?
