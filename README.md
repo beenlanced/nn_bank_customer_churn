@@ -14,7 +14,7 @@ This project aims to develop a predictive model to identify potential customer c
 
 ### The Problem
 
-Businesses such as banks providing services must concern themselves with the issue of `"Customer Churn"`. Churn is when customers switch to another service provider. For businesses, it is crucial to comprehend the factors that influence a customer's decision to bounce. By understanding these factors, businesses management can guide their management's efforts to enhance business services to retain customers and understand which services might have higher priorities over others.
+Businesses such as banks providing services must concern themselves with the issue of `"Customer Churn"`. Churn is when customers switch to another service provider. For businesses, it is crucial to comprehend the factors that influence a customer's decision to bounce. By understanding these factors, a business management team can guide their efforts to enhance business services to retain customers and understand which services might have higher priorities over others.
 
 **As the bank's data scientist build a neural network based classifier that can determine whether a customer will leave the bank within the next 6 months.**
 
