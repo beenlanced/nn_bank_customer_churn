@@ -10,7 +10,7 @@
 
 This project came out of the [Post Graduate program in Artificial Intelligence and Machine Learning (PGAIML): Business Applications University of Texas at Austin Course](https://la.utexas.edu/greatlearning/uta-artificial-intelligence-machine-learning.html).
 
-This project aims to develop a predictive model to identify potential customer churn for abanking context. The analysis utilizes neural network-based classification algorithms to predict whether a customer will leave the bank within the next six months.
+This project aims to develop a predictive model to identify potential customer churn for a bank. The analysis utilizes neural network-based classification algorithms to predict whether a customer will leave the bank within the next six months.
 
 ### The Problem
 
