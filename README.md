@@ -88,9 +88,9 @@ This model produced the following
 
 The project contains the key elements:
 
-- `Area Under the Receiver-Operating Characteris (ROC) Curve [(AUC)]` scoring for classifer identification,
+- `Area Under the Receiver-Operating Characteristic (ROC) Curve [(AUC)]` scoring for classifier identification,
 - `Deep Learning` for neural networks building,
-- `Dropout`, regularization technique appilied to prevent overfitting by randomly turning off a fraction of the neurons during training,
+- `Dropout`, regularization technique applied to prevent overfitting by randomly turning off a fraction of the neurons during training,
 - `Git` (version control),
 - `imblearn` Python library to perform oversampling and undersampling for balancing data sets,
 - `Jupyter` Python coded notebooks,
